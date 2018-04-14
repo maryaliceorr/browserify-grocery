@@ -1,3 +1,4 @@
+const events = require('./events');
 const departmentOutputDiv = document.getElementById('departments');
 
 const cardBuilder = (departmentArray) => {
@@ -5,7 +6,7 @@ const cardBuilder = (departmentArray) => {
   console.log('department-array', departmentArray);
   departmentArray.forEach((department) => {
     domString += `<div class='col-sm-3 department'>`;
-    domString +=   `<h3 class='hide'>${department.name}</h3>`;
+    domString +=   `<h3 class='hide department-title' data-department-id='${department.id}'>${department.name}</h3>`;
     domString +=   `<img class='department-image' src='${department.img}'>`;
     domString += `</div>`;
   });
@@ -14,6 +15,7 @@ const cardBuilder = (departmentArray) => {
 
 const printToDom = (departmentArray) => {
   departmentOutputDiv.innerHTML = cardBuilder(departmentArray);
+  events.addDepartmentEvents();
 };
 
 module.exports = printToDom;
