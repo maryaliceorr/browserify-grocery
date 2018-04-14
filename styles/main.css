@@ -1,5 +1,5 @@
 body {
-  background-color: pink;
+  background-color: darkslategrey;
 }
 
 .department {
@@ -9,4 +9,16 @@ body {
 .department-image {
   width: 100%;
   height: 400px;
+}
+
+.grey-out {
+  opacity: 0.4;
+}
+
+.department-title {
+  color: white;
+  position: absolute;
+  font-size: 50px;
+  top: 200px;
+  text-align: center;
 }
