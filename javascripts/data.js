@@ -1,5 +1,7 @@
 const loadDepartments = require('./departments');
 
+const printToDom = require('./dom');
+
 let departmentsArray = [];
 
 const nope = function () {
@@ -8,7 +10,7 @@ const nope = function () {
 
 const loadThis = function () {
   departmentsArray = JSON.parse(this.responseText).departments;
-  console.log(departmentsArray);
+  printToDom(departmentsArray);
 };
 
 const initializer = () => {
