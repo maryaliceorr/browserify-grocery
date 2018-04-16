@@ -11,7 +11,7 @@ const whenDepartmentsLoad = function () {
 
 const whenItemsLoad = function () {
   const itemsData = JSON.parse(this.responseText).items;
-  console.log('itemsData', itemsData);
+  data.setItems(itemsData);
 };
 
 const nope = function () {
