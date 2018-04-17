@@ -22,3 +22,12 @@ body {
   top: 200px;
   text-align: center;
 }
+
+.item-image {
+  width: 100px;
+  height: 100px;
+}
+
+.item .panel {
+  height: 300px;
+}
